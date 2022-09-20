@@ -25,8 +25,8 @@ Usage
 
 ``uuid-enumerate [shard_number/shard_count]``
 
-Prints all the UUIDs to stdout. If sharding, the shard number is zero-
-based and the shard count must be a power of two.
+Prints all the UUIDs to stdout. If sharding, the shard number is
+zero-based and the shard count must be a power of two.
 
 ``./X-uuid-generate``
 
@@ -55,6 +55,9 @@ Performance
 
 On a 2021 MBP (Apple M1 Pro)::
 
-    rfc6919 % clang -O3 -o X-uuid-enumerate uuid-enumerate.c  
-    rfc6919 % time ./X-uuid-enumerate > /dev/null 
+    rfc6919@mbp ~ % clang -O3 -o X-uuid-enumerate uuid-enumerate.c
+    rfc6919@mbp ~ % time ./X-uuid-enumerate > /dev/null
     ./X-uuid-enumerate > /dev/null  24.77s user 0.10s system 98% cpu 25.235 total
+
+This prints 2^32 text-formatted UUIDs (almost 160GB) to /dev/null in
+less than 25 seconds. Not bad!
