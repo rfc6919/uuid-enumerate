@@ -30,7 +30,7 @@ zero-based and the shard count must be a power of two.
 
 ``./X-uuid-generate``
 
-Invoke the cheat code. if ``(argv[0][2] == 'X')`` then run in a
+Invoke the cheat code. If ``(argv[0][2] == 'X')`` then run in a
 restricted mode that only traverses 32 bits worth of UUID space, for
 testing and benchmarking purposes.
 
@@ -59,5 +59,5 @@ On a 2021 MBP (Apple M1 Pro)::
     rfc6919@mbp ~ % time ./X-uuid-enumerate > /dev/null
     ./X-uuid-enumerate > /dev/null  24.77s user 0.10s system 98% cpu 25.235 total
 
-This prints 2^32 text-formatted UUIDs (almost 160GB) to /dev/null in
+This prints 2^32 text-formatted UUIDs (almost 160GB) to ``/dev/null`` in
 less than 25 seconds. Not bad!
